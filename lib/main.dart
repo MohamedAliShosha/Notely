@@ -12,6 +12,8 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // MultiBlocProvider used to provide multiple cubits to the app
+    // I am using it here to provide AddNotesCubit to the entire app screens
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AddNotesCubit()),
