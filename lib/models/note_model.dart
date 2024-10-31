@@ -17,9 +17,11 @@ class NoteModel extends HiveObject // my class extends HiveObject
   @HiveField(1)
   final String subTitle;
   @HiveField(2)
-  final String date;
+  final String
+      date; // String not a date time object because date time object will need another type adapter then register it
   @HiveField(3)
-  final int color;
+  final int
+      color; // The same case of the  date field, I need to convert it to int because Hive doesn't support color type
 
   NoteModel(
       {required this.title,
