@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:notes_app/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'add_note_form.dart';
 
@@ -10,27 +9,32 @@ class AddNoteBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AddNotesCubit(),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: BlocConsumer<AddNotesCubit, AddNotesState>(
-          listener: (context, state) {
-            if (state is AddNotesFailue) {
-              print('failed ${state.errorMessage}');
-            }
+      // used to provide the cubit to the widget tree
 
-            if (state is AddNotesSuccess) {
-              // if succees  then close the bottom sheet.
-              Navigator.pop(context);
-            }
-          },
-          builder: (context, state) {
-            return ModalProgressHUD(
-                // Checking  if the state is loading
-                inAsyncCall: state is AddNotesLoading ? true : false,
-                child: const SingleChildScrollView(child: AddNoteForm()));
-          },
-        ),
+      create: (context) => AddNotesCubit(),
+      child: BlocConsumer<AddNotesCubit, AddNotesState>(
+        // used to rebuild UI
+        listener: (context, state) {
+          if (state is AddNotesFailue) {
+            print('failed ${state.errorMessage}');
+          }
+
+          if (state is AddNotesSuccess) {
+            // if succees  then close the bottom sheet.
+            Navigator.pop(context);
+          }
+        },
+        builder: (context, state) {
+          return AbsorbPointer(
+            absorbing: state is AddNotesLoading
+                ? true
+                : false, // if the state is loading then absorb the pointer
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: SingleChildScrollView(child: AddNoteForm()),
+            ),
+          );
+        },
       ),
     );
   }
