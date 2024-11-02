@@ -49,7 +49,9 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  note.delete(); // delete can be accessed through hive object
+                },
                 icon: const Icon(Icons.delete),
                 color: Colors.black,
                 iconSize: 35,
