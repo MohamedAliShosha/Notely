@@ -29,9 +29,14 @@ class AddNoteBottomSheet extends StatelessWidget {
             absorbing: state is AddNotesLoading
                 ? true
                 : false, // if the state is loading then absorb the pointer
-            child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: SingleChildScrollView(child: AddNoteForm()),
+            child: Padding(
+              padding: EdgeInsets.only(
+                // ViewInsets is keyboard height
+                left: 16,
+                right: 16,
+                bottom: MediaQuery.of(context).viewInsets.bottom,
+              ),
+              child: const SingleChildScrollView(child: AddNoteForm()),
             ),
           );
         },
