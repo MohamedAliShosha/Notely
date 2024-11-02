@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app/constants.dart';
+import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/simple_bloc_observer.dart';
 import 'package:notes_app/views/notes_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,13 +15,16 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // MultiBlocProvider used to provide multiple cubits to the app
     // I am using it here to provide AddNotesCubit to the entire app screens
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        fontFamily: 'Poppins', // This apply font to all text in the app
+    return BlocProvider(
+      create: (context) => NotesCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          fontFamily: 'Poppins', // This apply font to all text in the app
+        ),
+        home: const NotesView(),
       ),
-      home: const NotesView(),
     );
   }
 }
