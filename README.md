@@ -1,16 +1,22 @@
-# Notes App 📃
+# Notely 📃
+A modern mobile app for creating and managing notes, featuring:
+- 🗒️ Simple and intuitive note creation  
+- 🎨 Custom color selection for better organization  
+- ✏️ Edit and delete notes with ease
 
-## Overview 🕵️‍♂️
-## The Notes App is a user-friendly Flutter application designed to help users manage their notes efficiently. It provides features for creating, editing, organizing, and deleting notes, ensuring a seamless user experience. This app leverages Flutter's cross-platform capabilities, making it compatible with both Android and iOS devices.
+## 🎨 Screens
+- 📋 **Home:** Displays a list of all notes (title, content preview, date, delete icon)
+- 🖊 New Note: Add a new note with title, content, and custom background color
+- 💾 Edit Note: Modify an existing note's title, content, and color
 
-## Features 🔧
-## Add Notes: Create new notes with titles and content. 🔄
-## Edit Notes: Modify existing notes. ✏️
-## Delete Notes: Remove notes that are no longer needed. 🗑️
-## Offline Access: All notes are stored locally, allowing access without an internet connection. 🔗
+## 🛠️ Tech Stack
+📱 **Frontend**
+- Framework: Flutter
+- State Management: Bloc
+  
+🧠 **Local Storage**
+- Hive
 
-## Dependencies 🌐
-## hive for local data storage
-## hive_flutter for integrating Hive with Flutter
-## Bloc for state management
-## intl for date formatting
+
+ 
+
