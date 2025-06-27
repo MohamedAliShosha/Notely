@@ -17,6 +17,13 @@ A modern mobile app for creating and managing notes, featuring:
 🧠 **Local Storage**
 - Hive
 
+📦 **Dependencies**
+- flutter_bloc
+- hive
+- hive_flutter
+- intl
+- modal_progress_hud_nsn
+
 
  
 
