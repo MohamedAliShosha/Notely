@@ -38,11 +38,7 @@ A modern mobile app for creating and managing notes, featuring:
 - Hive
 
 📦 **Dependencies**
-- flutter_bloc
-- hive
-- hive_flutter
-- intl
-- modal_progress_hud_nsn
+`flutter_bloc` / `hive` / `hive_flutter` / `intl` / `modal_progress_hud_nsn`
 
 
  
