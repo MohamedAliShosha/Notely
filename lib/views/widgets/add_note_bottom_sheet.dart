@@ -15,7 +15,7 @@ class AddNoteBottomSheet extends StatelessWidget {
       child: BlocConsumer<AddNotesCubit, AddNotesState>(
         // used to rebuild UI
         listener: (context, state) {
-          if (state is AddNotesFailue) {}
+          if (state is AddNotesFailure) {}
 
           if (state is AddNotesSuccess) {
             BlocProvider.of<NotesCubit>(context).fetchAllNotes();

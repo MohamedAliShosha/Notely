@@ -22,7 +22,7 @@ class AddNotesCubit extends Cubit<AddNotesState> {
       await notesBox.add(note); // add accepts dynamic argument
       emit(AddNotesSuccess());
     } catch (e) {
-      emit(AddNotesFailue(errorMessage: e.toString()));
+      emit(AddNotesFailure(errorMessage: e.toString()));
     }
   }
 }
