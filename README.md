@@ -1,31 +1,45 @@
 # Notely 📃
-A modern mobile app for creating and managing notes, featuring:
-- 🗒️ Simple and intuitive note creation  
-- 🎨 Custom color selection for better organization  
-- ✏️ Edit and delete notes with ease
+🗒️ A modern mobile app for organizing and managing your notes, featuring:
+- 🧠 Quick note creation.  
+- 🎨 Customizable colors.  
+- 🔍 Easy edit options.
 
   <p align="center">
   <img src="assets/screenShots/notes_all_views.png" alt="App Overview" width="800"/>
 </p>
 
 
-## 🎨 Screens
-- 📋 **Home:** Displays a list of all notes (title, content preview, date, delete icon)
+## 🎨 Views
+📋 1. Home View:
+- 📒 View all saved notes in a clean list
+- ➕ Add new notes with a floating button
+- 🗑️ Swipe to delete instantly.
 
-<p align="center">
-  <img src="assets/screenShots/notes_home_view.png" alt="App Overview" width="800"/>
+<p align="left">
+  <img src="assets/screenShots/notes_view.png" alt="App Overview" height="800"/>
 </p>
+
+##
   
-- 🖊 New Note: Add a new note with title, content, and custom background color
+📝 2. Add Note View: 
+- 🧠 Create new notes with title & content.
+- 🎨 Choose custom note color.
+- 💾 Save notes locally with one tap.
 
-<p align="center">
-  <img src="assets/screenShots/add_note_view.png" alt="App Overview" width="800"/>
+<p align="left">
+  <img src="assets/screenShots/add_note.png" alt="App Overview" height="800"/>
 </p>
 
-- 💾 Edit Note: Modify an existing note's title, content, and color
+##
 
-  <p align="center">
-  <img src="assets/screenShots/edit_note_view.png" alt="App Overview" width="800"/>
+✏️ 3. Edit Note View:
+- 🖋️ Edit existing notes quickly.
+- 🎨 Update note color or content.
+- 💾 Save changes easily.
+
+
+<p align="left">
+  <img src="assets/screenShots/edit_note.png" alt="App Overview" height="800"/>
 </p>
 
 
@@ -37,8 +51,6 @@ A modern mobile app for creating and managing notes, featuring:
 🧠 **Local Storage**
 - Hive
 
-📦 **Dependencies**
-`flutter_bloc` / `hive` / `hive_flutter` / `intl` / `modal_progress_hud_nsn`
 
 
  
