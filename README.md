@@ -83,3 +83,21 @@
     ├── bloc_observer.dart              # Bloc observer for debugging Cubit transitions
     ├── constants.dart                  # App constants (colors, strings, etc.)
     └── main.dart                       # App entry point
+
+```
+
+**Key Points:**
+
+- **controller/**: Acts as the Controller layer in the MVC pattern, containing Cubits (e.g., notes_cubit, add_notes_cubit) that manage app logic and state.
+- **models/**: Represents the Model layer, defining data structures such as NoteModel used across the app.
+- **views/**: Serves as the View layer, containing all UI screens and widgets that display data and interact with the user.
+- **widgets/**: Holds reusable UI components shared between multiple views.
+- **assets/**: Stores static resources such as fonts and screenshots.
+- **main.dart**: The app’s main entry point.
+- **bloc_observer.dart**: Observes Cubit/Bloc transitions for debugging.
+- **constants.dart**: Centralized constants for theming and colors.
+
+---
+
+**This structure is scalable, modular, and easy to maintain as your app grows.**
+
