@@ -11,7 +11,7 @@
 
 ## 🎨 Views
 
-📋 **1. Home View:**
+📋 **Home View:**
 - 📒 View all saved notes in a clean list  
 - ➕ Add new notes with a floating button  
 - 🗑️ Swipe to delete instantly  
@@ -22,7 +22,7 @@
 
 ##
 
-📝 **2. Add Note View:**  
+📝 **Add Note View:**  
 - 🧠 Create new notes with title & content  
 - 🎨 Choose custom note color  
 - 💾 Save notes locally with one tap  
@@ -33,7 +33,7 @@
 
 ##
 
-✏️ **3. Edit Note View:**  
+✏️ **Edit Note View:**  
 - 🖋️ Edit existing notes quickly  
 - 🎨 Update note color or content  
 - 💾 Save changes easily  
